@@ -1,0 +1,27 @@
+{
+  "name": "@oraculo/agent",
+  "version": "0.1.0",
+  "description": "ORACULO — Personal AI Agent for SPECTER v2. Orchestrates Veil MCP privacy tools, LATTICE trust verification, and Claude reasoning.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "oraculo": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "@lattice/sdk": "file:../lattice/sdk",
+    "@solana/web3.js": "^1.95.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^20.14.0"
+  }
+}
